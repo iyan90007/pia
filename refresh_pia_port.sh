@@ -8,7 +8,7 @@ printf "
 ############################# \n\n"
 
 # Retrieve variables
-pf_filepath=/pia-info/pf
+pf_filepath=/opt/pia/pia-info/pf
 PF_HOSTNAME="$( cat $pf_filepath/PF_HOSTNAME )"
 PF_GATEWAY="$( cat $pf_filepath/PF_GATEWAY )"
 payload="$( cat $pf_filepath/payload )"
