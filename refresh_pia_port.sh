@@ -1,6 +1,6 @@
-#!/usr/local/bin/bash
+#!/usr/bin/bash
 
-export PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/root/bin"
+export PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/bin:/root/bin"
 
 printf "
 #############################

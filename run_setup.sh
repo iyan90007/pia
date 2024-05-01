@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/bash
 
 # Copyright (C) 2020 Private Internet Access, Inc.
 #
