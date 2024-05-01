@@ -54,8 +54,8 @@ protocol="udp"
 encryption="strong"
 
 # To use openvn remove # from start of that line and add it to start of "PIA_AUTOCONNECT=wireguard"
-#PIA_AUTOCONNECT="openvpn_${protocol}_${encryption}"
-PIA_AUTOCONNECT=wireguard
+PIA_AUTOCONNECT="openvpn_${protocol}_${encryption}"
+# PIA_AUTOCONNECT=wireguard
 export PIA_AUTOCONNECT
 
 PIA_DNS="false"
