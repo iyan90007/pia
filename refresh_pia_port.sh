@@ -26,8 +26,8 @@ echo signature: $signature
 echo port: $port
 echo expires_at: $expires_at
 
-printf  "Sending port# to transmission-remote.\n\n"
-transmission-remote --auth "${transUser}":"${transPass}" -p $port
+# printf  "Sending port# to transmission-remote.\n\n"
+# transmission-remote --auth "${transUser}":"${transPass}" -p $port
 
 printf "\nTrying to bind the port . . . \n"
 
@@ -38,7 +38,7 @@ printf "\nTrying to bind the port . . . \n"
 
   bind_port_response="$(curl -Gs -m 5 \
     --connect-to "$PF_HOSTNAME::$PF_GATEWAY:" \
-    --cacert "/manual-connections/ca.rsa.4096.crt" \
+    --cacert "/opt/pia/ca.rsa.4096.crt" \
     --data-urlencode "payload=${payload}" \
     --data-urlencode "signature=${signature}" \
     "https://${PF_HOSTNAME}:19999/bindPort")"
