@@ -164,6 +164,7 @@ else
   cp openvpn_config/openvpn_down_dnsoverwrite.sh /opt/pia/pia-info/openvpn_down.sh
 fi
 
+<< 'MULTILINE-COMMENT'
 # Start the OpenVPN interface.
 # If something failed, stop this script.
 # If you get DNS errors because you miss some packages,
@@ -219,6 +220,12 @@ To disconnect the VPN, run:
 
 --> sudo kill $ovpn_pid <--
 "
+MULTILINE-COMMENT
+
+#Use Network manager to connect to VPN
+nmcli connection import type openvpn file /opt/pia/pia-info/pia.ovpn
+nmcli connection up id pia passwd-file vpnpasswd
+
 
 # This section will stop the script if PIA_PF is not set to "true".
 if [ "$PIA_PF" != true ]; then
