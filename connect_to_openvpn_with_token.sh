@@ -225,7 +225,7 @@ MULTILINE-COMMENT
 #Use Network manager to connect to VPN
 nmcli connection delete pia
 nmcli connection import type openvpn file /opt/pia/pia-info/pia.ovpn
-nmcli connection modify pia +vpn.data username=p3454959
+nmcli connection modify pia +vpn.data username=*******
 nmcli connection up id pia passwd-file /opt/pia/pia-info/vpnpasswd
 
 
