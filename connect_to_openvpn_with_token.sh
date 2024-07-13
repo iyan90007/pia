@@ -224,7 +224,7 @@ MULTILINE-COMMENT
 
 #Use Network manager to connect to VPN
 nmcli connection import type openvpn file /opt/pia/pia-info/pia.ovpn
-nmcli connection up id pia passwd-file vpnpasswd
+nmcli connection up id pia passwd-file /opt/pia/pia-info/pia_creds.txt
 
 
 # This section will stop the script if PIA_PF is not set to "true".
