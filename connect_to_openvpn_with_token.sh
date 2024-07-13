@@ -223,8 +223,10 @@ To disconnect the VPN, run:
 MULTILINE-COMMENT
 
 #Use Network manager to connect to VPN
+nmcli connection delete pia
 nmcli connection import type openvpn file /opt/pia/pia-info/pia.ovpn
-nmcli connection up id pia passwd-file /opt/pia/pia-info/pia_creds.txt
+nmcli connection modify pia +vpn.data username=p3454959
+nmcli connection up id pia passwd-file /opt/pia/pia-info/vpnpasswd
 
 
 # This section will stop the script if PIA_PF is not set to "true".
